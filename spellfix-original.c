@@ -13,12 +13,6 @@
 ** This module implements the spellfix1 VIRTUAL TABLE that can be used
 ** to search a large vocabulary for close matches.  See separate
 ** documentation (http://www.sqlite.org/spellfix1.html) for details.
-*************************************************************************
-** 2023 July 26
-** This is a MODIFIED version of the spellfix1.c extension.
-** The original spellfix1.c extension is part of the SQLite source tree
-** and could be found in the same directory as this file.
-** The name of the original spellfix1.c file is spellfix1-original.c
 */
 #include "sqlite3ext.h"
 SQLITE_EXTENSION_INIT1
@@ -586,10 +580,7 @@ struct EditDist3Lang {
 /*
 ** The default EditDist3Lang object, with default costs.
 */
-
-// The flowing line is modified
-static const EditDist3Lang editDist3Lang = { 0, 10, 100, 150, 0 };
-// The above line is modified
+static const EditDist3Lang editDist3Lang = { 0, 100, 100, 150, 0 };
 
 /*
 ** Complete configuration
